@@ -1,303 +1,183 @@
-/* RESET & BASE */
-* { margin: 0; padding: 0; box-sizing: border-box; }
+/* ========= BLOSSOM PILATES HOME PAGE ========= */
 
-/* Make body fill screen & use flex so footer can sit at bottom */
-html, body {
-  height: 100%;
+/* Basic layout helpers (if you don't already have these) */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
 }
 
-body {
-  font-family: Arial, sans-serif;
-  line-height: 1.6;
-  color: #333;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
+/* HEADER / NAV */
+.pilates-header {
+  background-color: #ffffff;
+  border-bottom: 1px solid #e5e5e5;
 }
 
-a { color: inherit; text-decoration: none; }
-
-/* UTILITY */
-.container { max-width: 1200px; margin: 0 auto; padding: 0 1rem; }
-.btn, .btn-sm {
-  display: inline-block;
-  background: #00b4d8;
-  color: #fff;
-  padding: 0.75rem 1.5rem;
-  border-radius: 4px;
-  transition: background .3s;
-}
-.btn-sm { font-size: 0.9rem; }
-.btn:hover, .btn-sm:hover { background: #0077b6; }
-
-/* HEADER */
-.site-header { background: #fff; border-bottom: 1px solid #eee; }
 .header-inner {
   display: flex;
   align-items: center;
-  gap: 1rem;
-}
-.main-nav { flex: 1; }
-.main-nav ul { list-style: none; display: flex; gap: 1rem; }
-.main-nav a { padding: 0.5rem; font-weight: 600; }
-.contact-short { font-size: 0.9rem; }
-.contact-short a { margin-left: 1rem; }
-.logo { margin-left: auto; }
-.logo img { height: 60px; }
-
-/* ACTIVE NAV */
-.main-nav a.active {
-  color: #00b4d8;
-  border-bottom: 2px solid #00b4d8;
+  justify-content: space-between;
+  padding: 0.75rem 0;
 }
 
-/* HERO */
-.hero {
-  position: relative;
-  background: linear-gradient(135deg, #03045e, #0077b6, #00b4d8);
-  height: 60vh;
+.logo img {
+  height: 52px;
+  width: auto;
+}
+
+.main-nav ul {
+  list-style: none;
   display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.hero-overlay {
-  background: rgba(0,0,0,0.35);
-  color: #fff;
-  text-align: center;
-  padding: 2rem;
-  max-width: 640px;
-  border-radius: 8px;
-}
-.hero-overlay h1 { font-size: 2.5rem; margin-bottom: 0.5rem; }
-.hero-overlay p { margin-bottom: 1rem; }
-
-/* PAGE INTRO */
-.page-intro {
-  padding: 3rem 0 2rem;
-}
-.page-intro h1 {
-  font-size: 2rem;
-  margin-bottom: 0.5rem;
-}
-.page-intro p {
-  max-width: 700px;
-}
-.page-intro .intro-image {
-  margin-top: 1.5rem;
-  max-width: 420px;
-  width: 100%;
-  border-radius: 8px;
-  display: block;
+  gap: 2rem;
+  margin: 0;
+  padding: 0;
 }
 
-/* ABOUT DETAIL */
-.about-detail {
-  padding: 2rem 0 2rem;
-}
-.about-detail h2 {
-  margin-top: 1.5rem;
-  margin-bottom: 0.5rem;
-}
-.about-detail ul {
-  margin-left: 1.25rem;
-}
-
-/* SERVICES */
-.services { padding: 4rem 0; }
-.services h2 {
-  text-align: center;
-  margin-bottom: 2rem;
-}
-.service-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px,1fr));
-  gap: 1.5rem;
-}
-.service-card {
-  background: #fafafa;
-  border: 1px solid #eee;
-  border-radius: 6px;
-  text-align: center;
-  overflow: hidden;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.03);
-}
-.service-card img {
-  width: 100%;
-  height: 160px;
-  object-fit: cover;
-}
-.service-card h3 { margin: 1rem; }
-.service-card p {
+.main-nav a {
+  text-decoration: none;
+  font-family: "Georgia", "Times New Roman", serif;
   font-size: 0.95rem;
-  padding: 0 1rem 1rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: #000;
 }
 
-/* SERVICE DETAIL (About/Services/Contact inner content) */
-.service-detail {
-  padding: 3rem 0 2rem;
-}
-.service-detail h2 {
-  margin-top: 1.5rem;
-  margin-bottom: 0.5rem;
+.main-nav a.active,
+.main-nav a:hover {
+  text-decoration: underline;
 }
 
-/* CONTACT BOX */
-.contact-box {
-  max-width: 500px;
-  margin: 0 auto;
-  padding: 2rem;
-  border-radius: 8px;
-  background: #fafafa;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-}
-.contact-box form > div { margin-bottom: 1rem; }
-.contact-box label {
-  display: block;
-  margin-bottom: 0.25rem;
-  font-weight: 600;
-}
-.contact-box input,
-.contact-box textarea {
-  width: 100%;
-  padding: 0.5rem;
-  border-radius: 4px;
-  border: 1px solid #ccc;
-  font: inherit;
-}
-.contact-box textarea {
-  min-height: 120px;
-  resize: vertical;
-}
-.form-status {
-  margin-top: 0.75rem;
-  font-size: 0.9rem;
-}
-
-/* GALLERY SECTION (HOME) */
-.gallery {
-  padding: 4rem 0 3rem;
-  background: #f9f9f9;
-}
-.gallery h2 { text-align: center; margin-bottom: 2rem; }
-.work-video {
-  width: 100%;
-  max-height: 500px;
-  object-fit: cover;
-  border-radius: 4px;
-}
-
-/* FULL GALLERY PAGE */
-.gallery-full {
-  padding: 3rem 0 2rem;
-}
-.gallery-full h1 {
-  text-align: center;
-  margin-bottom: 1.5rem;
-}
-.gallery-note {
-  margin-top: 1rem;
-  text-align: center;
-  font-size: 0.95rem;
-  color: #555;
-}
-
-/* SLIDESHOW */
-.slideshow {
+/* HERO IMAGE + TITLE */
+.hero-pilates {
   position: relative;
-  max-width: 800px;
-  margin: 0 auto;
-  overflow: hidden;
-  border-radius: 6px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-}
-.slides img {
   width: 100%;
-  display: none;
-}
-.slideshow button {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background: rgba(0,0,0,0.4);
-  color: #fff;
-  border: none;
-  padding: 0.5rem 1rem;
-  font-size: 2rem;
-  cursor: pointer;
-}
-.slideshow .prev { left: 10px; }
-.slideshow .next { right: 10px; }
-.slideshow button:hover {
-  background: rgba(0,0,0,0.6);
+  overflow: hidden;
 }
 
-/* CONTACT CTA (home page bottom) */
-.contact-cta {
-  padding: 3rem 0;
+.hero-image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.hero-text {
+  position: absolute;
+  left: 50%;
+  bottom: 12%;
+  transform: translateX(-50%);
   text-align: center;
 }
-.contact-cta h2 { margin-bottom: 1rem; }
 
-/* FOOTER – flex item that stays at bottom */
-.site-footer {
-  background: #111;
-  color: #ddd;
-  padding: 2rem 0 1rem;
-  margin-top: auto; /* pushes footer to bottom when content is short */
+.hero-text h1 {
+  font-family: "Georgia", "Times New Roman", serif;
+  font-size: clamp(2.5rem, 4vw, 4rem);
+  color: #000;
 }
-.footer-inner {
+
+/* GENERIC SECTION STYLING */
+.pilates-section {
+  padding: 4rem 1.5rem;
+}
+
+.pilates-section .section-heading {
+  text-align: center;
+  font-family: "Georgia", "Times New Roman", serif;
+  font-size: 2.2rem;
+  margin-bottom: 3rem;
+}
+
+.section-content {
+  max-width: 1100px;
+  margin: 0 auto;
   display: flex;
   flex-wrap: wrap;
-  gap: 2rem;
-}
-.footer-col { flex: 1; min-width: 220px; }
-.footer-col h3 { color: #fff; margin-bottom: 0.5rem; }
-.footer-col ul { list-style: none; }
-.footer-col li { margin-bottom: 0.25rem; }
-.social-icons a { margin-right: 0.5rem; color: #ddd; font-size: 1.2rem; }
-.footer-bottom {
-  text-align: center;
-  margin-top: 1rem;
-  font-size: 0.85rem;
+  gap: 3rem;
 }
 
-/* FLOATING SOCIAL */
-.float-social {
-  position: fixed;
-  right: 1rem;
-  bottom: 1rem;
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-  z-index: 1000;
+.image-col,
+.text-col {
+  flex: 1 1 320px;
 }
-.float-social a {
-  width: 2.5rem;
-  height: 2.5rem;
-  background: #00b4d8;
-  color: #fff;
-  border-radius: 50%;
+
+.image-col img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Big display text (find your strength / magic hour) */
+.large-display-text {
+  font-family: "Georgia", "Times New Roman", serif;
+  font-size: clamp(2rem, 3vw, 3rem);
+  line-height: 1.1;
+  text-transform: none;
+}
+
+/* MAGIC HOUR SECTION – mimic left text / right image */
+.magic-hour {
+  padding-top: 2rem;
+}
+
+/* FOOTER BAR */
+.pilates-footer {
+  border-top: 1px solid #e5e5e5;
+  padding: 1rem 1.5rem;
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
-  justify-content: center;
-  font-size: 1.2rem;
+  justify-content: space-between;
+  gap: 1rem;
 }
-.float-social a:hover { background: #0077b6; }
 
-/* RESPONSIVE */
+.footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+.footer-links a {
+  text-decoration: none;
+  font-size: 0.9rem;
+  color: #000;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
+
+/* Join button */
+.join-btn {
+  background-color: #007bff;
+  color: #fff;
+  padding: 0.6rem 1.4rem;
+  border-radius: 4px;
+  font-size: 0.95rem;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.join-btn:hover {
+  opacity: 0.9;
+}
+
+/* Mobile tweaks */
 @media (max-width: 768px) {
   .header-inner {
-    flex-wrap: wrap;
-    justify-content: center;
+    flex-direction: column;
+    gap: 0.75rem;
   }
-  .logo { margin-left: 0; }
+
   .main-nav ul {
     flex-wrap: wrap;
     justify-content: center;
   }
-  .contact-short {
-    width: 100%;
-    text-align: center;
-    margin-bottom: 0.5rem;
+
+  .hero-text {
+    bottom: 6%;
+  }
+
+  .pilates-footer {
+    flex-direction: column;
+    align-items: flex-start;
   }
 }
