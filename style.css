@@ -1,45 +1,64 @@
-/* ========= BLOSSOM PILATES HOME PAGE ========= */
-
-/* Basic layout helpers (if you don't already have these) */
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 1.5rem;
+/* ===== GLOBAL ===== */
+* {
+  box-sizing: border-box;
 }
 
-/* HEADER / NAV */
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Georgia", "Times New Roman", serif;
+  background-color: #dcdcdc; /* light grey like outer background */
+}
+
+/* ===== TOP BLACK NAV BAR ===== */
 .pilates-header {
-  background-color: #ffffff;
-  border-bottom: 1px solid #e5e5e5;
+  background-color: #000;
+  padding: 0;
 }
 
 .header-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  padding: 0.75rem 0;
+  justify-content: center;
+  height: 70px;
+}
+
+/* Logo sits at far left on top of black bar */
+.logo {
+  position: absolute;
+  left: 10px;
+  display: flex;
+  align-items: center;
 }
 
 .logo img {
   height: 52px;
   width: auto;
+  border-radius: 50%;
+  background: #fff;
 }
 
+/* Centered nav links */
 .main-nav ul {
   list-style: none;
   display: flex;
-  gap: 2rem;
+  gap: 40px;
   margin: 0;
   padding: 0;
 }
 
 .main-nav a {
   text-decoration: none;
-  font-family: "Georgia", "Times New Roman", serif;
+  color: #ffffff;
   font-size: 0.95rem;
-  letter-spacing: 0.05em;
-  text-transform: uppercase;
-  color: #000;
+  letter-spacing: 0.06em;
+  text-transform: none;
 }
 
 .main-nav a.active,
@@ -47,51 +66,54 @@
   text-decoration: underline;
 }
 
-/* HERO IMAGE + TITLE */
+/* ===== WHITE PAGE WRAPPER (BIG CARD) ===== */
+.page-wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  background-color: #ffffff;
+  min-height: 100vh;
+}
+
+/* ===== HERO SECTION ===== */
 .hero-pilates {
   position: relative;
   width: 100%;
-  overflow: hidden;
 }
 
 .hero-image {
-  display: block;
   width: 100%;
+  display: block;
   height: auto;
 }
 
 .hero-text {
   position: absolute;
+  bottom: 18%;
   left: 50%;
-  bottom: 12%;
   transform: translateX(-50%);
-  text-align: center;
 }
 
 .hero-text h1 {
-  font-family: "Georgia", "Times New Roman", serif;
-  font-size: clamp(2.5rem, 4vw, 4rem);
-  color: #000;
+  margin: 0;
+  font-size: clamp(2.6rem, 4vw, 4.2rem);
 }
 
-/* GENERIC SECTION STYLING */
+/* ===== CONTENT SECTIONS ===== */
 .pilates-section {
-  padding: 4rem 1.5rem;
+  padding: 3.5rem 3rem;
 }
 
-.pilates-section .section-heading {
+.section-heading {
   text-align: center;
-  font-family: "Georgia", "Times New Roman", serif;
   font-size: 2.2rem;
-  margin-bottom: 3rem;
+  margin: 0 0 3rem 0;
 }
 
 .section-content {
-  max-width: 1100px;
-  margin: 0 auto;
   display: flex;
   flex-wrap: wrap;
   gap: 3rem;
+  align-items: center;
 }
 
 .image-col,
@@ -105,25 +127,28 @@
   display: block;
 }
 
-/* Big display text (find your strength / magic hour) */
+/* Big display text like mockup */
 .large-display-text {
-  font-family: "Georgia", "Times New Roman", serif;
-  font-size: clamp(2rem, 3vw, 3rem);
+  font-size: clamp(2.2rem, 3.2vw, 3.2rem);
   line-height: 1.1;
-  text-transform: none;
 }
 
-/* MAGIC HOUR SECTION – mimic left text / right image */
+.right-text {
+  text-align: left; /* matches your screenshot */
+}
+
+/* ===== MAGIC HOUR SECTION ===== */
 .magic-hour {
-  padding-top: 2rem;
+  padding-top: 1.5rem;
 }
 
-/* FOOTER BAR */
+/* ===== FOOTER BAR ===== */
 .pilates-footer {
   border-top: 1px solid #e5e5e5;
-  padding: 1rem 1.5rem;
+  background-color: #000;
+  color: #fff;
+  padding: 0.8rem 3rem;
   display: flex;
-  flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
   gap: 1rem;
@@ -132,27 +157,27 @@
 .footer-links {
   display: flex;
   flex-wrap: wrap;
-  gap: 1.5rem;
+  gap: 2rem;
 }
 
 .footer-links a {
+  color: #fff;
   text-decoration: none;
-  font-size: 0.9rem;
-  color: #000;
+  font-size: 0.85rem;
 }
 
 .footer-links a:hover {
   text-decoration: underline;
 }
 
-/* Join button */
+/* Blue join button */
 .join-btn {
   background-color: #007bff;
   color: #fff;
-  padding: 0.6rem 1.4rem;
-  border-radius: 4px;
-  font-size: 0.95rem;
+  padding: 0.5rem 1.6rem;
+  border-radius: 2px;
   text-decoration: none;
+  font-size: 0.9rem;
   white-space: nowrap;
 }
 
@@ -160,20 +185,26 @@
   opacity: 0.9;
 }
 
-/* Mobile tweaks */
+/* ===== RESPONSIVE ===== */
 @media (max-width: 768px) {
   .header-inner {
-    flex-direction: column;
-    gap: 0.75rem;
+    height: auto;
+    padding: 0.5rem 0;
   }
 
   .main-nav ul {
+    gap: 1.1rem;
+    font-size: 0.8rem;
     flex-wrap: wrap;
     justify-content: center;
   }
 
   .hero-text {
-    bottom: 6%;
+    bottom: 10%;
+  }
+
+  .pilates-section {
+    padding: 2.5rem 1.5rem;
   }
 
   .pilates-footer {
