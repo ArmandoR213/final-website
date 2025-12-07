@@ -212,3 +212,72 @@ body {
     align-items: flex-start;
   }
 }
+
+/* =====================
+   CONTACT PAGE STYLES
+   ===================== */
+
+.contact-page {
+  padding: 3rem 3rem 4rem;
+}
+
+.contact-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3rem;
+  align-items: flex-start;
+}
+
+.contact-info h1 {
+  font-size: 2rem;
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+}
+
+.contact-info p {
+  font-size: 1.2rem;
+  margin: 0.25rem 0;
+}
+
+.contact-label {
+  margin-top: 1.6rem;
+  font-weight: bold;
+  font-size: 1.3rem;
+}
+
+.contact-form {
+  width: 100%;
+  max-width: 360px;
+}
+
+.contact-form label {
+  display: block;
+  font-size: 1.1rem;
+  margin-bottom: 0.3rem;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  border: 2px solid #000;
+  background: #fff;
+  padding: 0.4rem;
+  margin-bottom: 1.1rem;
+  font-size: 1rem;
+  font-family: inherit;
+}
+
+.contact-submit {
+  margin-top: 0.4rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .contact-grid {
+    flex-direction: column;
+  }
+
+  .contact-page {
+    padding: 2rem 1.5rem 3rem;
+  }
+}
