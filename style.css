@@ -353,3 +353,62 @@ body {
     max-width: 280px;
   }
 }
+
+/* ========== GALLERY PAGE (BEFORE/AFTER GRID) ========== */
+
+.gallery-page {
+  padding: 3rem 3rem 4rem;
+}
+
+.gallery-inner {
+  max-width: 1150px;
+  margin: 0 auto;
+}
+
+.gallery-heading {
+  text-align: center;
+  font-size: 2.6rem;
+  margin: 0 0 3rem 0;
+}
+
+/* Rows of images */
+.gallery-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+
+/* Top row = taller images */
+.gallery-row-top img {
+  height: 320px;
+  width: auto;
+  object-fit: cover;
+  display: block;
+}
+
+/* Bottom row = shorter images */
+.gallery-row-bottom {
+  margin-top: 2.5rem;
+}
+
+.gallery-row-bottom img {
+  height: 210px;
+  width: auto;
+  object-fit: cover;
+  display: block;
+}
+
+/* Responsive tweaks */
+@media (max-width: 900px) {
+  .gallery-page {
+    padding: 2.5rem 1.5rem 3rem;
+  }
+
+  .gallery-row-top img,
+  .gallery-row-bottom img {
+    height: auto;
+    width: 100%;
+    max-width: 280px;
+  }
+}
