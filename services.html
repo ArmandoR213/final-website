@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Services — ADR Trading</title>
+  <title>Equipment – Blossom Pilates</title>
   <link rel="stylesheet" href="style.css">
   <link
     rel="stylesheet"
@@ -14,99 +14,81 @@
 </head>
 <body>
 
-  <header class="site-header">
-    <div class="container header-inner">
+  <!-- TOP NAV BAR -->
+  <header class="site-header pilates-header">
+    <div class="header-inner">
+
+      <!-- Logo -->
+      <a href="index.html" class="logo">
+        <img src="images/logo.png" alt="Blossom Pilates logo">
+      </a>
+
+      <!-- Nav -->
       <nav class="main-nav">
         <ul>
           <li><a href="index.html">Home</a></li>
-          <li><a href="about-us.html">About</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
           <li><a href="services.html" class="active">Services</a></li>
           <li><a href="gallery.html">Gallery</a></li>
-          <li><a href="contact-us.html">Contact</a></li>
+          <li><a href="blog.html">Blog</a></li>
         </ul>
       </nav>
-      <div class="contact-short">
-        <a href="tel:1234567890"><i class="fas fa-phone"></i> 123-456-7890</a>
-        <a href="mailto:adrTrading@gmail.com"><i class="fas fa-envelope"></i> adrTrading@gmail.com</a>
-      </div>
-      <a href="index.html" class="logo">
-        <img src="images/logo.png" alt="ADR Trading Logo">
-      </a>
+
     </div>
   </header>
 
-  <section class="page-intro">
-    <div class="container">
-      <h1>Trading Services &amp; Mentoring</h1>
-      <p>
-        These are the core ways I work with students.
-      </p>
-    </div>
-  </section>
+  <!-- WHITE PAGE WRAPPER -->
+  <div class="page-wrapper">
+    <main class="equipment-page">
+      <div class="equipment-inner">
 
-  <section class="service-detail">
-    <div class="container">
-      <h2>1:1 Mentoring</h2>
-      <p>
-        One-on-one sessions focused on your charts, your rules, and your problems.
-        We walk through live or replay charts, plug risk leaks, and build a plan
-        you can actually follow.
-      </p>
+        <!-- PAGE TITLE -->
+        <h1 class="equipment-heading">Equipment</h1>
 
-      <h2>Small Group Coaching</h2>
-      <p>
-        Small groups for students who want to learn together.
-        Topics can include ADR and range concepts, time-of-day setups,
-        prop-firm rules, and journaling.
-      </p>
+        <!-- GRID OF 4 PIECES -->
+        <section class="equipment-grid">
 
-      <h2>Prop Firm Evaluation Support</h2>
-      <p>
-        Help with designing a plan to pass and keep funded accounts
-        (Apex, Topstep, FundedNext, etc.), including realistic
-        targets and daily loss limits.
-      </p>
+          <!-- Top-left -->
+          <article class="equipment-item">
+            <img src="images/services1.png" alt="Pilates Reformer">
+            <h2>Pilates Reformer</h2>
+          </article>
 
-      <h2>Strategy Reviews</h2>
-      <p>
-        Bring your idea (indicator, Pine script, or manual strategy) and
-        we’ll stress-test it against risk, drawdown, and your schedule.
-      </p>
+          <!-- Top-right -->
+          <article class="equipment-item">
+            <img src="images/services2.png" alt="Cadillac / Trapeze table">
+            <h2>Cadillac / Trapeze table</h2>
+          </article>
 
-      <p>
-        To ask about pricing or availability, send an email to
-        <a href="mailto:adrTrading@gmail.com">adrTrading@gmail.com</a>
-        or use the contact page.
-      </p>
-    </div>
-  </section>
+          <!-- Bottom-left -->
+          <article class="equipment-item">
+            <img src="images/services3.png" alt="Pilates Chair (Wunda Chair)">
+            <h2>Pilates Chair (Wunda Chair)</h2>
+          </article>
 
-  <footer class="site-footer">
-    <div class="container footer-inner">
-      <div class="footer-col">
-        <h3>Contact</h3>
-        <p><i class="fas fa-phone"></i> <a href="tel:1234567890">123-456-7890</a></p>
-        <p><i class="fas fa-envelope"></i> <a href="mailto:adrTrading@gmail.com">adrTrading@gmail.com</a></p>
+          <!-- Bottom-right -->
+          <article class="equipment-item">
+            <img src="images/services4.png" alt="Pilates barrel">
+            <h2>Pilates barrel</h2>
+          </article>
+
+        </section>
       </div>
-      <div class="footer-col">
-        <h3>Follow Us</h3>
-        <div class="social-icons">
-          <a href="https://www.facebook.com/" target="_blank" aria-label="Facebook">
-            <i class="fab fa-facebook-f" aria-hidden="true"></i>
-          </a>
-          <a href="https://www.instagram.com/" target="_blank" aria-label="Instagram">
-            <i class="fab fa-instagram" aria-hidden="true"></i>
-          </a>
-          <a href="https://www.tiktok.com/@adr_tradez" target="_blank" aria-label="TikTok">
-            <i class="fab fa-tiktok" aria-hidden="true"></i>
-          </a>
-        </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="pilates-footer">
+      <div class="footer-links">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Social Media</a>
+        <a href="#">Recommendation</a>
+        <a href="contact.html">Contact</a>
       </div>
-    </div>
-    <div class="footer-bottom">
-      <p>© 2025 ADR Trading • All rights reserved</p>
-    </div>
-  </footer>
+
+      <a href="#" class="join-btn">Join our community</a>
+    </footer>
+  </div>
 
   <script src="script.js"></script>
 </body>

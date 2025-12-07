@@ -516,3 +516,64 @@ body {
     width: 35%;
   }
 }
+
+/* ========== EQUIPMENT (SERVICES) PAGE ========== */
+
+.equipment-page {
+  padding: 3rem 3rem 4rem;
+}
+
+.equipment-inner {
+  max-width: 1150px;
+  margin: 0 auto;
+}
+
+.equipment-heading {
+  text-align: center;
+  font-size: 2.6rem;
+  margin: 0 0 3rem 0;
+}
+
+/* 2 x 2 grid of equipment items */
+.equipment-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 3rem 4rem;
+  justify-items: center;
+}
+
+.equipment-item {
+  text-align: left;
+}
+
+.equipment-item img {
+  width: 100%;
+  max-width: 420px;
+  height: auto;
+  display: block;
+}
+
+.equipment-item h2 {
+  margin-top: 1rem;
+  font-size: 2rem;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .equipment-page {
+    padding: 2.5rem 1.5rem 3rem;
+  }
+
+  .equipment-grid {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  .equipment-item {
+    text-align: center;
+  }
+
+  .equipment-item h2 {
+    font-size: 1.7rem;
+  }
+}
