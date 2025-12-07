@@ -412,3 +412,107 @@ body {
     max-width: 280px;
   }
 }
+
+/* ========== BLOG PAGE ========== */
+
+.blog-page {
+  padding: 3rem 3rem 4rem;
+}
+
+.blog-inner {
+  max-width: 1150px;
+  margin: 0 auto;
+}
+
+.blog-heading {
+  text-align: center;
+  font-size: 2.6rem;
+  margin: 0 0 3rem 0;
+}
+
+/* Top section: big newsletter left, two stacked images right */
+.blog-top {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.blog-top-main {
+  flex: 1 1 55%;
+}
+
+.blog-top-main img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.blog-top-side {
+  flex: 1 1 35%;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.blog-top-side img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Clothes section */
+.blog-clothes {
+  margin-top: 1rem;
+}
+
+.blog-subheading {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+/* Two-column grid of outfit items */
+.clothes-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2.5rem;
+}
+
+.clothes-item {
+  flex: 1 1 45%;
+  display: flex;
+  gap: 1.2rem;
+  align-items: flex-start;
+}
+
+.clothes-item img {
+  width: 40%;
+  max-width: 180px;
+  height: auto;
+  display: block;
+}
+
+.clothes-text p {
+  margin: 0;
+  font-size: 1.2rem;
+  line-height: 1.3;
+}
+
+/* Responsive tweaks */
+@media (max-width: 900px) {
+  .blog-page {
+    padding: 2.5rem 1.5rem 3rem;
+  }
+
+  .blog-top {
+    flex-direction: column;
+  }
+
+  .clothes-item {
+    flex: 1 1 100%;
+  }
+
+  .clothes-item img {
+    width: 35%;
+  }
+}
