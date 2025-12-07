@@ -285,3 +285,71 @@ body {
   text-align: center;
   width: 100%;
 }
+
+/* ========== ABOUT / PILATES REFORMER STUDIO PAGE ========== */
+
+.studio-page {
+  padding: 3rem 3rem 4rem;
+}
+
+.studio-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.studio-heading {
+  text-align: center;
+  font-size: 2.6rem;
+  margin: 0 0 3rem 0;
+}
+
+/* Cards row */
+.studio-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 3rem;
+}
+
+.studio-card {
+  max-width: 260px;
+  text-align: left;
+}
+
+/* Frame around each image */
+.card-frame {
+  background: #f2f2f2;
+  padding: 0.75rem;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+.card-frame img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.studio-card h2 {
+  margin: 0.6rem 0 0.1rem;
+  font-size: 1.2rem;
+}
+
+.studio-card p {
+  margin: 0;
+  font-size: 1.05rem;
+}
+
+/* Responsive layout */
+@media (max-width: 768px) {
+  .studio-page {
+    padding: 2.5rem 1.5rem 3rem;
+  }
+
+  .studio-cards {
+    gap: 2rem;
+  }
+
+  .studio-card {
+    max-width: 280px;
+  }
+}
