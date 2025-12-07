@@ -281,3 +281,7 @@ body {
     padding: 2rem 1.5rem 3rem;
   }
 }
+.hero-text h1 {
+  text-align: center;
+  width: 100%;
+}
